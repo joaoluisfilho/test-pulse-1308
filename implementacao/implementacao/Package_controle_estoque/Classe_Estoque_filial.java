@@ -12,6 +12,10 @@ public class Classe_Estoque_filial {
 	private static int last_seq_num = 1;
 	private static int last_pedido_num = 1;
 
+	public Classe_Estoque_filial(String Nome) {
+		Nome_Filial=Nome;
+	}
+	
 	private static ArrayList<Classe_produto> cadastro_produtos = new ArrayList<Classe_produto>();
 
 	public int cadastra_produto( float preco_produto,
@@ -178,4 +182,11 @@ public class Classe_Estoque_filial {
 		
 	}
 
+	public void print_dados_produto(Classe_produto produto) {
+		System.out.println("N.SEQ\t\tDESC\t\tCOD_BARRA\t\tPRECO\t\tQUANTIDADE");
+		System.out.println(produto.nSeq_produto+"\t\t"+produto.descricao_produto+"\t\t"+produto.cod_barra_produto
+				+"\t\t"+produto.preco_produto+"\t\t"+produto.qtdade_produto);
+	}
+	
+	
 }
